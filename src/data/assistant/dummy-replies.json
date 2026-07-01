@@ -1,0 +1,30 @@
+{
+  "generalReplies": [
+    "Thanks - I logged that. I can help summarize this page or suggest next actions.",
+    "Got it. I am a demo assistant right now, but I can still help you structure decisions.",
+    "That makes sense. If you want, I can break this into a short checklist.",
+    "Noted. I can draft a follow-up message or internal note from this context.",
+    "I hear you. We can keep this thread focused and track next steps here."
+  ],
+  "clientReplies": [
+    "Understood. I noted this in the client context.",
+    "I can keep this discussion scoped to the selected client.",
+    "Thanks. I will treat this as client-specific guidance.",
+    "Captured. Want me to turn this into client talking points?",
+    "I marked this as a client thread item."
+  ],
+  "keywordReplies": [
+    {
+      "keywords": ["seo", "release", "marketing"],
+      "reply": "For releases and SEO, focus on title/description consistency and verify OG image before publish."
+    },
+    {
+      "keywords": ["client", "portfolio", "fund"],
+      "reply": "Client context noted - I can help tailor this to their portfolio profile."
+    },
+    {
+      "keywords": ["error", "bug", "404", "failed"],
+      "reply": "If you want, I can switch into a quick debug checklist: reproduce, isolate route/state, then verify API contract."
+    }
+  ]
+}

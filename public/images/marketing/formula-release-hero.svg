@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Demo release hero">
+  <defs>
+    <linearGradient id="rel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14532d"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#rel)"/>
+  <text x="600" y="200" text-anchor="middle" dominant-baseline="middle" fill="#ecfdf5" font-family="ui-sans-serif,system-ui,sans-serif" font-size="32" font-weight="600">Marketing release (dummy hero)</text>
+</svg>
