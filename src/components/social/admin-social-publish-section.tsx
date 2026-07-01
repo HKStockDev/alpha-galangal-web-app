@@ -7,7 +7,7 @@ import { Loader2, Send, Sparkles } from "lucide-react";
 import { useAuth } from "@/context/auth-context";
 import { useToast } from "@/context/toast-context";
 import {
-  listConvictionSocialAccounts,
+  listPrecisionSocialAccounts,
   previewSocialPostCaption,
   publishSocialPost,
   socialPlatformLabel,
@@ -69,7 +69,7 @@ export function AdminSocialPublishSection({
   useEffect(() => {
     if (!accessToken) return;
     setLoadingAccounts(true);
-    listConvictionSocialAccounts(accessToken)
+    listPrecisionSocialAccounts(accessToken)
       .then(setAccounts)
       .catch((err) =>
         showError(err instanceof Error ? err.message : "Failed to load social accounts")
@@ -108,7 +108,7 @@ export function AdminSocialPublishSection({
         share_title: shareTitle,
         share_summary: shareSummary,
         ticker,
-        organization_name: "Conviction",
+        organization_name: "Precision",
       });
       setCaption(result.caption);
       if (result.suggested_social_account_id) {

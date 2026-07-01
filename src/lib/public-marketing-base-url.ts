@@ -11,7 +11,7 @@ export function getPublicMarketingBaseUrl(): string {
   if (process.env.NODE_ENV === "development") {
     return "http://localhost:3000";
   }
-  return "https://www.withconviction.ai";
+  return "https://www.withprecision.ai";
 }
 
 export function absolutePublicMarketingUrl(path: string): string {

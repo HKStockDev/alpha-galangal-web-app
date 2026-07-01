@@ -218,7 +218,7 @@ export function PublicFormulaHubView({
 
       {Object.keys(extra).length > 0 ? <JsonDetails label="Other fields (raw)" value={extra} /> : null}
 
-      <FormulaShareSection shareTitle={data.name || "Conviction model"} className="mt-2" />
+      <FormulaShareSection shareTitle={data.name || "Precision model"} className="mt-2" />
     </Container>
   );
 }

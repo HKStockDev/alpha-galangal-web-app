@@ -33,7 +33,7 @@ export default function SocialLayout({ children }: { children: React.ReactNode }
           Social media
         </h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Connect Conviction-managed social accounts, refresh OAuth tokens, and review publish
+          Connect Precision-managed social accounts, refresh OAuth tokens, and review publish
           history (platform admin).
         </p>
         <ScrollableTabsNav aria-label="Social media sections">

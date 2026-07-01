@@ -483,7 +483,7 @@ export default function StockDetailsPage() {
               scoreBreakdowns={details.score_breakdowns ?? {
                 fundamental_constriction_score: null,
                 net_exposure_score: null,
-                insider_conviction_score: null,
+                insider_precision_score: null,
                 political_score: null,
               }}
             />

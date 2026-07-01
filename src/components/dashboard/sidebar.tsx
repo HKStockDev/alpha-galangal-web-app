@@ -32,7 +32,7 @@ const NAV_SEGMENTS = [
   },
   { segment: "/political-score", label: "Political score" },
   { segment: "/investors-scores", label: "Investors scores" },
-  { segment: "/insider-conviction", label: "Insider conviction" },
+  { segment: "/insider-precision", label: "Insider precision" },
   { segment: "/net-exposure", label: "Net exposure" },
   { segment: "/structural-growth", label: "Structural growth" },
   { segment: "/funds", label: "Funds" },
@@ -83,7 +83,7 @@ const ORG_HOME_NAV_SEGMENTS = [
   "/fundamental-constriction",
   "/political-score",
   "/investors-scores",
-  "/insider-conviction",
+  "/insider-precision",
   "/net-exposure",
   "/structural-growth",
 ] as const;
@@ -98,7 +98,7 @@ const NAV_ICONS = {
   "/fundamental-constriction": FlaskConical,
   "/political-score": Shield,
   "/investors-scores": LineChart,
-  "/insider-conviction": Calculator,
+  "/insider-precision": Calculator,
   "/net-exposure": LineChart,
   "/structural-growth": LineChart,
   "/formulas": LayoutGrid,
@@ -122,7 +122,7 @@ export function Sidebar({
   const orgClientsPath = `${ORG_DASHBOARD}/clients`;
   const orgFcPath = `${ORG_DASHBOARD}/fundamental-constriction`;
   const orgPsPath = `${ORG_DASHBOARD}/political-score`;
-  const orgIcPath = `${ORG_DASHBOARD}/insider-conviction`;
+  const orgIcPath = `${ORG_DASHBOARD}/insider-precision`;
   const orgInvestorsScoresPath = `${ORG_DASHBOARD}/investors-scores`;
   const orgNePath = `${ORG_DASHBOARD}/net-exposure`;
   const orgStructuralPath = `${ORG_DASHBOARD}/structural-growth`;
@@ -147,7 +147,7 @@ export function Sidebar({
   const isOrgPoliticalPage =
     basePath === ORG_DASHBOARD &&
     (pathname === orgPsPath || pathname.startsWith(`${orgPsPath}/`));
-  const isOrgInsiderConvictionPage =
+  const isOrgInsiderPrecisionPage =
     basePath === ORG_DASHBOARD &&
     (pathname === orgIcPath || pathname.startsWith(`${orgIcPath}/`));
   const isOrgInvestorsScoresPage =
@@ -198,7 +198,7 @@ export function Sidebar({
     isOrgFundamentalPage ||
     isOrgPoliticalPage ||
     isOrgInvestorsScoresPage ||
-    isOrgInsiderConvictionPage ||
+    isOrgInsiderPrecisionPage ||
     isOrgNetExposurePage ||
     isOrgStructuralGrowthPage
       ? NAV_SEGMENTS.filter((item) =>

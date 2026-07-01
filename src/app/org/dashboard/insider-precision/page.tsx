@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
 import { useToast } from "@/context/toast-context";
 import {
-  getInsiderConvictionScores,
-  calculateInsiderConvictionScores,
-  type InsiderConvictionCalculateResult,
-  type InsiderConvictionScoreRow,
+  getInsiderPrecisionScores,
+  calculateInsiderPrecisionScores,
+  type InsiderPrecisionCalculateResult,
+  type InsiderPrecisionScoreRow,
 } from "@/lib/api";
 import {
   GhostButton,
@@ -32,7 +32,7 @@ import { FormInput, FormLabel } from "@/components/ui-kit/forms";
 import { AdminFormulaMarketingSection } from "@/components/dashboard/admin-formula-marketing-section";
 import { FormulaMarketingPreviewButtons } from "@/components/dashboard/formula-marketing-preview-buttons";
 import { FormulaPageResultsSettingsTabs } from "@/components/dashboard/formula-page-results-settings-tabs";
-import { INSIDER_CONVICTION_MARKETING_KEY } from "@/lib/formula-marketing-keys";
+import { INSIDER_PRECISION_MARKETING_KEY } from "@/lib/formula-marketing-keys";
 import { ORG_DASHBOARD } from "@/lib/auth-routing";
 import { FormulaExplanationSection } from "@/components/formulas/formula-explanation-section";
 
@@ -200,7 +200,7 @@ function SortableHead({
 // Page
 // ---------------------------------------------------------------------------
 
-export default function InsiderConvictionPage() {
+export default function InsiderPrecisionPage() {
   const pathname = usePathname();
   const showSubheading = pathname?.startsWith(ORG_DASHBOARD) ?? false;
   const { accessToken } = useAuth();
@@ -212,14 +212,14 @@ export default function InsiderConvictionPage() {
   const [minScore, setMinScore] = useState("");
   const [maxScore, setMaxScore] = useState("");
   const [running, setRunning] = useState(false);
-  const [result, setResult] = useState<InsiderConvictionCalculateResult | null>(null);
+  const [result, setResult] = useState<InsiderPrecisionCalculateResult | null>(null);
   const [tableSort, setTableSort] = useState<{ column: SortColumn | null; dir: "asc" | "desc" }>({
     column: "score",
     dir: "desc",
   });
   const [expandedTicker, setExpandedTicker] = useState<string | null>(null);
 
-  const sortedRows = useMemo<InsiderConvictionScoreRow[]>(() => {
+  const sortedRows = useMemo<InsiderPrecisionScoreRow[]>(() => {
     const rows = result?.scores;
     if (!rows?.length) return [];
     if (!tableSort.column) return rows;
@@ -260,7 +260,7 @@ export default function InsiderConvictionPage() {
       if (!accessToken) return;
       setRunning(true);
       try {
-        const fn = recalculate ? calculateInsiderConvictionScores : getInsiderConvictionScores;
+        const fn = recalculate ? calculateInsiderPrecisionScores : getInsiderPrecisionScores;
         const data = await fn(accessToken, body);
         setResult(data);
         if (toast) {
@@ -271,7 +271,7 @@ export default function InsiderConvictionPage() {
                 : "Run finished; no scores written. Ensure insider trades are synced."
             );
           } else if (data.tickersWithData > 0) {
-            showSuccess(`Loaded ${data.tickersWithData} insider conviction scores`);
+            showSuccess(`Loaded ${data.tickersWithData} insider precision scores`);
           }
         }
       } catch (err) {
@@ -311,7 +311,7 @@ export default function InsiderConvictionPage() {
         <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0 space-y-2">
             <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Insider conviction
+              Insider precision
             </h1>
             {showSubheading ? (
               <p className="text-base text-muted-foreground">
@@ -348,7 +348,7 @@ export default function InsiderConvictionPage() {
         <FormulaPageResultsSettingsTabs
           results={
             <>
-        <FormulaExplanationSection formulaKey={INSIDER_CONVICTION_MARKETING_KEY} />
+        <FormulaExplanationSection formulaKey={INSIDER_PRECISION_MARKETING_KEY} />
 
         {/* Score range quick filter */}
         <section className="rounded-2xl border border-border bg-card p-4 space-y-3 shadow-sm">
@@ -422,7 +422,7 @@ export default function InsiderConvictionPage() {
         <Dialog open={modalOpen} onOpenChange={setModalOpen}>
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>
-              <DialogTitle>Custom run — insider conviction</DialogTitle>
+              <DialogTitle>Custom run — insider precision</DialogTitle>
               <DialogDescription>
                 Limit securities, filter by tickers, or set score bounds. Leave empty for
                 defaults.
@@ -481,7 +481,7 @@ export default function InsiderConvictionPage() {
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Formula: role weight × recency weight × trade value → buy/sell pressure →
                 cluster multiplier → tanh normalised by market cap (Formulas.md). Settings
-                in Admin → Formulas → Insider conviction.
+                in Admin → Formulas → Insider precision.
               </p>
             </form>
             <DialogFooter>
@@ -689,7 +689,7 @@ export default function InsiderConvictionPage() {
               <EmptyState
                 description={
                   <>
-                    No insider conviction scores match your filter.{" "}
+                    No insider precision scores match your filter.{" "}
                     {result.tickersRequested === 0
                       ? "No active securities found — ingest securities first."
                       : "Ensure insider trades are synced and the scoring formula is seeded."}
@@ -717,8 +717,8 @@ export default function InsiderConvictionPage() {
           }
           settings={
             <AdminFormulaMarketingSection
-              formulaKey={INSIDER_CONVICTION_MARKETING_KEY}
-              contextLabel="Insider conviction"
+              formulaKey={INSIDER_PRECISION_MARKETING_KEY}
+              contextLabel="Insider precision"
             />
           }
         />

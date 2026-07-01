@@ -5,7 +5,7 @@ import { Footer } from "@/components/marketing/footer"
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for the Conviction platform, websites, and related services operated by Conviction AI LLC.",
+    "Privacy policy for the Precision platform, websites, and related services operated by Precision AI LLC.",
 }
 
 export default function PrivacyPage() {
@@ -32,23 +32,23 @@ export default function PrivacyPage() {
                   1. Who We Are
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Conviction AI LLC (&quot;Conviction,&quot; &quot;we,&quot;
-                  &quot;our,&quot; or &quot;us&quot;) operates the Conviction
-                  platform, the websites at withconviction.ai and
-                  app.withconviction.ai, and related services (collectively, the
+                  Precision AI LLC (&quot;Precision,&quot; &quot;we,&quot;
+                  &quot;our,&quot; or &quot;us&quot;) operates the Precision
+                  platform, the websites at withprecision.ai and
+                  app.withprecision.ai, and related services (collectively, the
                   &quot;Service&quot;). This Privacy Policy describes how we
                   collect, use, and share personal information when you visit
                   our websites, use the Service, or otherwise interact with us.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Our mailing address is Conviction AI LLC, 8401 Mayland Dr,
+                  Our mailing address is Precision AI LLC, 8401 Mayland Dr,
                   Ste A, Richmond, Henrico County, VA 23294, United States. You
                   can reach us about any privacy-related question at{" "}
                   <a
-                    href="mailto:alex@withconviction.ai"
+                    href="mailto:alex@withprecision.ai"
                     className="font-medium text-primary hover:text-primary/80"
                   >
-                    alex@withconviction.ai
+                    alex@withprecision.ai
                   </a>
                   .
                 </p>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="mt-4 list-disc pl-6 text-muted-foreground">
                   <li>
-                    Visitors to our marketing websites at withconviction.ai (the
+                    Visitors to our marketing websites at withprecision.ai (the
                     &quot;Marketing Site&quot;).
                   </li>
                   <li>
@@ -80,12 +80,12 @@ export default function PrivacyPage() {
                   Customers use the Service to provide certain data and content
                   to the platform (&quot;Customer Data&quot;). With respect to
                   Customer Data, the Customer is the &quot;controller&quot; and
-                  Conviction is the &quot;processor&quot; — meaning the Customer
-                  determines what data is processed and Conviction processes
+                  Precision is the &quot;processor&quot; — meaning the Customer
+                  determines what data is processed and Precision processes
                   Customer Data on the Customer&apos;s behalf under our
                   subscription agreement. For all other personal information
                   described in this Policy (e.g., billing, account, and
-                  marketing data), Conviction is the controller.
+                  marketing data), Precision is the controller.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   If you are an End User of a Customer organization, your use
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
                     (account label, external account name and identifier,
                     access and refresh tokens, token expiry, and connection
                     status). Today these integrations are used for social
-                    accounts that Conviction operates for its own outbound
+                    accounts that Precision operates for its own outbound
                     communications; we may expand integration capabilities to
                     Customers in the future.
                   </li>
@@ -217,8 +217,8 @@ export default function PrivacyPage() {
                   <li>Respond to inquiries and provide customer support.</li>
                   <li>Analyze usage and product performance.</li>
                   <li>
-                    Operate Conviction&apos;s own marketing channels (including
-                    social posts from Conviction-managed accounts).
+                    Operate Precision&apos;s own marketing channels (including
+                    social posts from Precision-managed accounts).
                   </li>
                   <li>
                     Comply with applicable laws and enforce our agreements.
@@ -229,7 +229,7 @@ export default function PrivacyPage() {
                   monetary consideration. To the extent that our use of
                   analytics or session-replay tools could be considered
                   &quot;sharing&quot; under California law, you may opt out at
-                  any time by emailing alex@withconviction.ai or by enabling
+                  any time by emailing alex@withprecision.ai or by enabling
                   the Global Privacy Control (GPC) signal in your browser.
                 </p>
               </section>
@@ -376,7 +376,7 @@ export default function PrivacyPage() {
                         and{" "}
                         <strong className="text-foreground">Meta</strong> —
                         only when connected via OAuth to operate
-                        Conviction-managed social accounts.
+                        Precision-managed social accounts.
                       </li>
                       <li>
                         <strong className="text-foreground">
@@ -417,7 +417,7 @@ export default function PrivacyPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   We may add or change sub-processors from time to time.
                   Customers can request the current list by emailing
-                  alex@withconviction.ai.
+                  alex@withprecision.ai.
                 </p>
               </section>
 
@@ -427,7 +427,7 @@ export default function PrivacyPage() {
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   Depending on where you live, you may have the following
-                  rights with respect to personal information that Conviction
+                  rights with respect to personal information that Precision
                   holds as a controller. The Service is currently offered to
                   U.S. residents only.
                 </p>
@@ -487,7 +487,7 @@ export default function PrivacyPage() {
                 </ul>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   To exercise any of these rights, email
-                  alex@withconviction.ai with your request and the email
+                  alex@withprecision.ai with your request and the email
                   associated with your account so we can verify your identity.
                   We will respond within the time required by applicable law
                   (generally up to 45 days). We may need additional information
@@ -569,7 +569,7 @@ export default function PrivacyPage() {
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   If you discover a potential security issue, please contact us
-                  promptly at alex@withconviction.ai.
+                  promptly at alex@withprecision.ai.
                 </p>
               </section>
 
@@ -596,7 +596,7 @@ export default function PrivacyPage() {
                   directed to children under the age of 18. We do not knowingly
                   collect personal information from children. If you believe we
                   have inadvertently collected such information, contact us at
-                  alex@withconviction.ai and we will delete it.
+                  alex@withprecision.ai and we will delete it.
                 </p>
               </section>
 
@@ -649,7 +649,7 @@ export default function PrivacyPage() {
                   contact us at:
                 </p>
                 <address className="mt-4 not-italic leading-relaxed text-muted-foreground">
-                  Conviction AI LLC
+                  Precision AI LLC
                   <br />
                   8401 Mayland Dr, Ste A
                   <br />
@@ -658,10 +658,10 @@ export default function PrivacyPage() {
                   United States
                   <br />
                   <a
-                    href="mailto:alex@withconviction.ai"
+                    href="mailto:alex@withprecision.ai"
                     className="font-medium text-primary hover:text-primary/80"
                   >
-                    alex@withconviction.ai
+                    alex@withprecision.ai
                   </a>
                 </address>
               </section>

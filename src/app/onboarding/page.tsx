@@ -237,7 +237,7 @@ export default function OnboardingPage() {
             href="/m"
             className="text-base font-semibold tracking-tight text-primary hover:text-primary/90"
           >
-            Conviction
+            Precision
           </Link>
           <h1 className="mt-4 text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
             Set up your organization
@@ -529,7 +529,7 @@ export default function OnboardingPage() {
                 type="button"
                 className="h-11 w-full rounded-lg"
                 onClick={() => {
-                  showSuccess("Welcome to Conviction");
+                  showSuccess("Welcome to Precision");
                   router.push(
                     user?.is_platform_admin ? ADMIN_DASHBOARD : ORG_DASHBOARD
                   );

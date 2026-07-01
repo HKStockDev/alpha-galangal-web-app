@@ -80,7 +80,7 @@ export async function GET() {
                 color: CREAM,
               }}
             >
-              Conviction
+              Precision
             </span>
           </div>
           <span
@@ -124,7 +124,7 @@ export async function GET() {
                 color: ACCENT,
               }}
             >
-              conviction.
+              precision.
             </span>
           </div>
         </div>

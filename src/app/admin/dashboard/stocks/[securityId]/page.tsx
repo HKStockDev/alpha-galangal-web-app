@@ -616,7 +616,7 @@ export default function StockDetailsPage() {
           <CardContent className="grid gap-2 text-sm md:grid-cols-2">
             <p>Fundamental constriction: {formatScore(details.scores.fundamental_constriction_score)}</p>
             <p>Net exposure: {formatScore(details.scores.net_exposure_score)}</p>
-            <p>Insider conviction: {formatScore(details.scores.insider_conviction_score)}</p>
+            <p>Insider precision: {formatScore(details.scores.insider_precision_score)}</p>
             <p>Political score: {formatScore(details.scores.political_score)}</p>
           </CardContent>
         </Card>

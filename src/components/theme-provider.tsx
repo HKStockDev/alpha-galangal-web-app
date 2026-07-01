@@ -18,8 +18,8 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 if (
   typeof window !== "undefined" &&
   process.env.NODE_ENV !== "production" &&
-  !(globalThis as typeof globalThis & { __convictionThemeWarningPatched?: boolean })
-    .__convictionThemeWarningPatched
+  !(globalThis as typeof globalThis & { __precisionThemeWarningPatched?: boolean })
+    .__precisionThemeWarningPatched
 ) {
   const original = console.error;
   console.error = (...args: unknown[]) => {
@@ -29,8 +29,8 @@ if (
     }
     original.apply(console, args as Parameters<typeof console.error>);
   };
-  (globalThis as typeof globalThis & { __convictionThemeWarningPatched?: boolean })
-    .__convictionThemeWarningPatched = true;
+  (globalThis as typeof globalThis & { __precisionThemeWarningPatched?: boolean })
+    .__precisionThemeWarningPatched = true;
 }
 
 export function ThemeProvider({

@@ -47,11 +47,11 @@ export function CookieBanner() {
             </div>
             <div className="min-w-0 flex-1">
               <h2 className="text-sm font-semibold text-foreground sm:text-base">
-                Cookies on Conviction
+                Cookies on Precision
               </h2>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                 We use strictly necessary cookies to run the site. With your consent we also use
-                analytics and session-replay tools to understand how visitors use Conviction so we
+                analytics and session-replay tools to understand how visitors use Precision so we
                 can improve it. You can change your mind any time from the footer.{" "}
                 <Link
                   href="/privacy"

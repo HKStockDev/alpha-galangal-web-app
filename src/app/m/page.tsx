@@ -13,7 +13,7 @@ import { Filter, Layers, Target, Check, X } from "lucide-react"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Conviction — Differentiated equity research",
+    absolute: "Precision - Component-based content architecture for a research platform",
   },
   alternates: { canonical: "/" },
 }
@@ -116,7 +116,7 @@ const PERSONAS = [
     eyebrow: "ASSET MANAGERS",
     title: "Boutique funds",
     description:
-      "Overlay political, insider, and thematic signals into concentrated conviction strategies.",
+      "Overlay political, insider, and thematic signals into concentrated precision strategies.",
   },
 ]
 
@@ -133,11 +133,11 @@ export default function HomePage() {
               <div>
                 <div className="mb-6 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
                   <span className="h-px w-6 bg-border" aria-hidden />
-                  <span>Conviction · Research Platform</span>
+                  <span>Precision · Research Platform</span>
                 </div>
                 <h1 className="font-display text-balance text-5xl font-normal leading-[1.02] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
                   Discover differentiated equity ideas with{" "}
-                  <em className="not-italic text-primary">conviction</em>
+                  <em className="not-italic text-primary">precision</em>
                 </h1>
                 <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
                   Build custom research models using factors, insider activity,
@@ -189,7 +189,7 @@ export default function HomePage() {
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeader
-              eyebrow="Why Conviction"
+              eyebrow="Why Precision"
               title="Move beyond generic screeners"
             />
             <div className="mt-14 grid gap-10 md:grid-cols-3">
@@ -362,7 +362,7 @@ export default function HomePage() {
                 </div>
                 <div className="bg-primary/[0.03] p-6 dark:bg-primary/10 dark:ring-1 dark:ring-inset dark:ring-primary/20">
                   <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-                    Conviction
+                    Precision
                   </h3>
                   <ul className="mt-6 flex flex-col gap-3">
                     {[

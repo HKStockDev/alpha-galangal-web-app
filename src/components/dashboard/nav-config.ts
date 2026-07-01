@@ -22,7 +22,7 @@ const NAV_SEGMENTS: readonly DashboardNavItem[] = [
   },
   { segment: "/political-score", label: "Political score" },
   { segment: "/investors-scores", label: "Investors scores" },
-  { segment: "/insider-conviction", label: "Insider conviction" },
+  { segment: "/insider-precision", label: "Insider precision" },
   { segment: "/net-exposure", label: "Net exposure" },
   { segment: "/structural-growth", label: "Structural growth" },
   { segment: "/funds", label: "Funds" },
@@ -83,7 +83,7 @@ export const organizationHomeNavItems: readonly DashboardNavItem[] = [
   "/fundamental-constriction",
   "/political-score",
   "/investors-scores",
-  "/insider-conviction",
+  "/insider-precision",
   "/net-exposure",
   "/structural-growth",
 ]
@@ -107,7 +107,7 @@ function isOrganizationHomeContext(pathname: string): boolean {
     `${ORG_DASHBOARD}/formulas`,
     `${ORG_DASHBOARD}/fundamental-constriction`,
     `${ORG_DASHBOARD}/political-score`,
-    `${ORG_DASHBOARD}/insider-conviction`,
+    `${ORG_DASHBOARD}/insider-precision`,
     `${ORG_DASHBOARD}/net-exposure`,
     `${ORG_DASHBOARD}/structural-growth`,
   ];

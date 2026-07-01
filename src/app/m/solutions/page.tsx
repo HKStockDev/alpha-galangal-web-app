@@ -48,15 +48,15 @@ const solutions = [
     id: "boutique-managers",
     icon: Briefcase,
     badge: "For Boutique Managers",
-    title: "Build conviction around concentrated positions",
+    title: "Build precision around concentrated positions",
     description:
-      "Overlay political, insider, and thematic signals into concentrated conviction strategies. Detect dislocations and track factor alignment over time.",
+      "Overlay political, insider, and thematic signals into concentrated precision strategies. Detect dislocations and track factor alignment over time.",
     benefits: [
       "Detect dislocations when fundamentals diverge from price",
       "Track insider alignment across your portfolio",
       "Monitor industry momentum and sector rotations",
       "Apply thematic overlays for catalyst tracking",
-      "Build conviction with explainable scoring models",
+      "Build precision with explainable scoring models",
     ],
   },
 ]

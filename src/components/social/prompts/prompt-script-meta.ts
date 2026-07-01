@@ -1,4 +1,4 @@
-export const RENDER_TEMPLATE_STORAGE_KEY = "conviction_social_render_template";
+export const RENDER_TEMPLATE_STORAGE_KEY = "precision_social_render_template";
 
 export type RenderScriptMeta = {
   icon: string;
@@ -63,12 +63,12 @@ export const ROLE_BADGE_VARIANT: Record<
 };
 
 export const SAMPLE_CONTEXT = {
-  organization_name: "Conviction",
+  organization_name: "Precision",
   ticker: "AAPL",
-  signal_name: "High insider conviction",
+  signal_name: "High insider precision",
   summary:
     "Insider buying accelerated over the last 90 days with clustered open-market purchases.",
-  page_url: "https://app.withconviction.ai/stocks/AAPL",
+  page_url: "https://app.withprecision.ai/stocks/AAPL",
 };
 
 export type PromptsTab = "overview" | "scripts" | "templates" | "sandbox";

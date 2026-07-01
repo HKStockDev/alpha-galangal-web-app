@@ -54,7 +54,7 @@ export function ManageCookiesDialog() {
             Cookie preferences
           </DialogTitle>
           <DialogDescription>
-            Choose which categories of cookies and similar technologies you allow on Conviction. You
+            Choose which categories of cookies and similar technologies you allow on Precision. You
             can change these any time. See our{" "}
             <Link
               href="/privacy"
