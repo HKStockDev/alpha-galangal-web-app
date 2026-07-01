@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 160" role="img" aria-label="Precision logo dark full">
+  <g transform="translate(16 16)">
+    <path d="M96 16a56 56 0 1 0 0 112" fill="none" stroke="#F3F7F4" stroke-width="8" stroke-linecap="round"/>
+    <rect x="34" y="86" width="10" height="22" rx="2" fill="#CFE4D9"/>
+    <rect x="50" y="74" width="10" height="34" rx="2" fill="#CFE4D9"/>
+    <rect x="66" y="60" width="10" height="48" rx="2" fill="#CFE4D9"/>
+  </g>
+  <text x="140" y="108" fill="#F3F7F4" font-family="Times New Roman, Georgia, serif" font-size="96" letter-spacing="0.5">
+    onviction
+  </text>
+</svg>
