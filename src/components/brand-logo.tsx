@@ -20,15 +20,15 @@ export function BrandLogo({
   const src = useMemo(
     () =>
       collapsed
-        ? `/logos/conviction-${mode}-collapsed.png`
-        : `/logos/conviction-${mode}-full.png`,
+        ? `/logos/precision-${mode}-collapsed.svg`
+        : `/logos/precision-${mode}-full.svg`,
     [collapsed, mode]
   );
 
   return (
     <img
       src={src}
-      alt="Conviction"
+      alt="Precision"
       className={cn(
         "h-auto w-auto max-w-none",
         collapsed ? "max-h-7" : "max-h-10",
