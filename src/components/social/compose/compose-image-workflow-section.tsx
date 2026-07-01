@@ -81,7 +81,7 @@ export function ComposeImageWorkflowSection({
           <div className="mt-3 space-y-3">
             <div>
               <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                Path A — In Precision
+                Path A — In Conviction
               </p>
               <SecondaryButton
                 type="button"
@@ -89,7 +89,7 @@ export function ComposeImageWorkflowSection({
                 disabled={generatingImage || !imagePromptText.trim()}
                 onClick={onGenerateWithGemini}
               >
-                {generatingImage ? "Generating with Gemini…" : "Generate with Gemini (in Precision)"}
+                {generatingImage ? "Generating with Gemini…" : "Generate with Gemini (in Conviction)"}
               </SecondaryButton>
               {generatedImageMediaId ? (
                 <p className="mt-2 text-xs text-muted-foreground">

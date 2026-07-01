@@ -17,7 +17,7 @@ export function isAppHost(hostHeader: string | null): boolean {
     return true;
   }
   const hostname = h.split(":")[0] ?? "";
-  if (hostname === "app.withprecision.ai") {
+  if (hostname === "app.withconviction.ai") {
     return true;
   }
   if (hostname.startsWith("app.") && hostname.endsWith(".vercel.app")) {
@@ -44,7 +44,7 @@ export function isMarketingHost(hostHeader: string | null): boolean {
   if (vercelDefault && hostname === vercelDefault) {
     return true;
   }
-  if (hostname === "withprecision.ai" || hostname === "www.withprecision.ai") {
+  if (hostname === "withconviction.ai" || hostname === "www.withconviction.ai") {
     return true;
   }
   if (hostname === "localhost" || hostname === "127.0.0.1") {

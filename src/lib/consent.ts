@@ -3,8 +3,8 @@
  * so we can re-prompt users automatically if categories or material policy change.
  */
 
-export const CONSENT_STORAGE_KEY = "precision.consent.v1";
-export const CONSENT_CHANGE_EVENT = "precision:consent-change";
+export const CONSENT_STORAGE_KEY = "conviction.consent.v1";
+export const CONSENT_CHANGE_EVENT = "conviction:consent-change";
 
 export type ConsentCategory = "necessary" | "analytics" | "session_replay";
 

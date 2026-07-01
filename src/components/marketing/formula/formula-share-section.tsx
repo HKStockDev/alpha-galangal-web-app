@@ -18,7 +18,7 @@ type Props = {
 };
 
 function makeShareText(title: string, pageUrl: string) {
-  const t = title.trim() || "Precision";
+  const t = title.trim() || "Conviction";
   return `${t} — ${pageUrl}`.replace(/\s+/g, " ").trim();
 }
 

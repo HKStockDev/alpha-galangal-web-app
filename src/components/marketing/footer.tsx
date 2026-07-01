@@ -24,17 +24,17 @@ const footerLinks = {
 
 const socialLinks = [
   {
-    href: "https://www.linkedin.com/company/withprecision/",
+    href: "https://www.linkedin.com/company/withconviction/",
     label: "LinkedIn",
     icon: Linkedin,
   },
   {
-    href: "https://x.com/_Precision_AI",
+    href: "https://x.com/_Conviction_AI",
     label: "X (formerly Twitter)",
     icon: XIcon,
   },
   {
-    href: "https://www.facebook.com/PrecisionAI",
+    href: "https://www.facebook.com/ConvictionAI",
     label: "Facebook",
     icon: Facebook,
   },
@@ -62,15 +62,15 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block">
               <Image
-                src="/logos/precision-light-full.svg"
-                alt="Precision"
+                src="/logos/conviction-light-full.svg"
+                alt="Conviction"
                 width={180}
                 height={40}
                 className="h-8 w-auto max-w-[180px] dark:hidden"
               />
               <Image
-                src="/logos/precision-dark-full.svg"
-                alt="Precision"
+                src="/logos/conviction-dark-full.svg"
+                alt="Conviction"
                 width={180}
                 height={40}
                 className="hidden h-8 w-auto max-w-[180px] dark:block"
@@ -153,7 +153,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-border/40 pt-8 sm:flex-row sm:justify-between">
           <p className="text-center text-sm text-muted-foreground sm:text-left">
-            &copy; {new Date().getFullYear()} Precision AI LLC. All rights reserved.
+            &copy; {new Date().getFullYear()} Conviction AI LLC. All rights reserved.
           </p>
           <MarketingThemeToggle variant="labeled" />
         </div>

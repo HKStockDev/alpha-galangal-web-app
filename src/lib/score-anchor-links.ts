@@ -1,6 +1,6 @@
 /** Maps formula score keys to evidence anchor panel section ids (CON-120). */
 export const FORMULA_TO_ANCHOR_SECTION: Record<string, string> = {
-  insider_precision_score: "anchor-insider",
+  insider_conviction_score: "anchor-insider",
   net_exposure_score: "anchor-macro",
   fundamental_constriction_score: "anchor-earnings",
   political_score: "anchor-flows",

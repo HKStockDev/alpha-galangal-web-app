@@ -87,7 +87,7 @@ export function AdminSocialMediaPanel() {
       <header>
         <h2 className="text-xl font-semibold tracking-tight text-foreground">Media library</h2>
         <p className="mt-1 text-sm text-muted-foreground">
-          All media in your Woop project library (Precision Gemini uploads, API uploads, and assets
+          All media in your Woop project library (Conviction Gemini uploads, API uploads, and assets
           saved to the project media library on Woop). Click a thumbnail to preview or download.
           Post drafts that were never saved to the media library are not listed here.
         </p>

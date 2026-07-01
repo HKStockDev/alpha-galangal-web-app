@@ -39,7 +39,7 @@ export function PromptsPhilosophyPanel({
       <SectionCard>
         <h3 className="text-base font-semibold text-foreground">Hybrid prompt model</h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          Precision composes captions at runtime from layered prompts — not one mega-prompt.
+          Conviction composes captions at runtime from layered prompts — not one mega-prompt.
           Each render script bundles slots that merge in order:
         </p>
         <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">

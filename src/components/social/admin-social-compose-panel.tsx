@@ -6,7 +6,7 @@ import { useToast } from "@/context/toast-context";
 import {
   completeWoopMediaUpload,
   getWoopPlatformInputs,
-  listPrecisionSocialAccounts,
+  listConvictionSocialAccounts,
   listSocialRenderTemplates,
   listWoopMedia,
   previewSocialImagePrompt,
@@ -139,7 +139,7 @@ export function AdminSocialComposePanel() {
     setLoading(true);
     try {
       const [acctRows, renders] = await Promise.all([
-        listPrecisionSocialAccounts(accessToken),
+        listConvictionSocialAccounts(accessToken),
         listSocialRenderTemplates(accessToken),
       ]);
       const active = acctRows.filter((a) => (a.status ?? "").toLowerCase() === "active");

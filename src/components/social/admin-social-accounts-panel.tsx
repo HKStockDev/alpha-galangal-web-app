@@ -98,7 +98,7 @@ export function AdminSocialAccountsPanel({ showSectionHeader = true }: Props) {
               Connected accounts
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Precision-managed accounts used to publish on social platforms. Connect a network and
+              Conviction-managed accounts used to publish on social platforms. Connect a network and
               refresh access tokens here.
             </p>
           </div>
@@ -113,7 +113,7 @@ export function AdminSocialAccountsPanel({ showSectionHeader = true }: Props) {
       ) : !hasRows ? (
         <EmptyState
           title="No accounts connected"
-          description="Connect Precision social accounts for publishing. LinkedIn, Facebook, Instagram, X, and TikTok OAuth are supported."
+          description="Connect Conviction social accounts for publishing. LinkedIn, Facebook, Instagram, X, and TikTok OAuth are supported."
           action={connectMenu("empty")}
         />
       ) : (

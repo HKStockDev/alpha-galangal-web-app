@@ -33,7 +33,7 @@ export function getAppOrigin(request: NextRequest): string {
   if (vc) {
     return vc;
   }
-  return "https://app.withprecision.ai";
+  return "https://app.withconviction.ai";
 }
 
 export function getMarketingOrigin(request: NextRequest): string {
@@ -53,5 +53,5 @@ export function getMarketingOrigin(request: NextRequest): string {
   if (vc) {
     return vc;
   }
-  return "https://www.withprecision.ai";
+  return "https://www.withconviction.ai";
 }

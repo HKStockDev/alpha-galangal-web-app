@@ -18,15 +18,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
-  getInsiderPrecisionScoreFormula,
-  updateInsiderPrecisionScoreParams,
-  type InsiderPrecisionCapNormMethod,
-  type InsiderPrecisionFormulaParams,
+  getInsiderConvictionScoreFormula,
+  updateInsiderConvictionScoreParams,
+  type InsiderConvictionCapNormMethod,
+  type InsiderConvictionFormulaParams,
 } from "@/lib/api";
 import { SectionCard } from "@/components/ui-kit/cards";
 import { cn } from "@/lib/utils";
 
-const CAP_NORM_OPTIONS: { value: InsiderPrecisionCapNormMethod; label: string }[] = [
+const CAP_NORM_OPTIONS: { value: InsiderConvictionCapNormMethod; label: string }[] = [
   { value: "market_cap", label: "Market cap" },
   { value: "enterprise_value", label: "Enterprise value" },
   { value: "revenue_ttm", label: "Revenue (TTM)" },
@@ -47,10 +47,10 @@ const TRANSACTION_TYPE_OPTIONS: { code: string; label: string }[] = [
 ];
 
 function sameParams(
-  a: InsiderPrecisionFormulaParams,
-  b: InsiderPrecisionFormulaParams
+  a: InsiderConvictionFormulaParams,
+  b: InsiderConvictionFormulaParams
 ): boolean {
-  const keys = Object.keys(a) as (keyof InsiderPrecisionFormulaParams)[];
+  const keys = Object.keys(a) as (keyof InsiderConvictionFormulaParams)[];
   for (const k of keys) {
     if (k === "included_transaction_types") {
       if (a[k].length !== b[k].length) return false;
@@ -96,7 +96,7 @@ function NumField({
   );
 }
 
-export function InsiderPrecisionTab({
+export function InsiderConvictionTab({
   accessToken,
   showSuccess,
   showError,
@@ -105,15 +105,15 @@ export function InsiderPrecisionTab({
   showSuccess: (msg: string) => void;
   showError: (msg: string) => void;
 }) {
-  const [params, setParams] = useState<InsiderPrecisionFormulaParams | null>(null);
-  const [saved, setSaved] = useState<InsiderPrecisionFormulaParams | null>(null);
+  const [params, setParams] = useState<InsiderConvictionFormulaParams | null>(null);
+  const [saved, setSaved] = useState<InsiderConvictionFormulaParams | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
 
   useEffect(() => {
     if (!accessToken) return;
-    getInsiderPrecisionScoreFormula(accessToken)
+    getInsiderConvictionScoreFormula(accessToken)
       .then((res) => {
         const p = res.formula?.definition?.params;
         if (p) {
@@ -121,13 +121,13 @@ export function InsiderPrecisionTab({
           setSaved(p);
         }
       })
-      .catch(() => showError("Failed to load insider precision formula"))
+      .catch(() => showError("Failed to load insider conviction formula"))
       .finally(() => setLoading(false));
   }, [accessToken, showError]);
 
-  function patch<K extends keyof InsiderPrecisionFormulaParams>(
+  function patch<K extends keyof InsiderConvictionFormulaParams>(
     key: K,
-    value: InsiderPrecisionFormulaParams[K]
+    value: InsiderConvictionFormulaParams[K]
   ) {
     setParams((prev) => (prev ? { ...prev, [key]: value } : prev));
   }
@@ -140,7 +140,7 @@ export function InsiderPrecisionTab({
   function handleConfirm() {
     if (!params || !accessToken) return;
     setSaving(true);
-    updateInsiderPrecisionScoreParams(params, accessToken)
+    updateInsiderConvictionScoreParams(params, accessToken)
       .then((formula) => {
         const p = formula?.definition?.params;
         if (p) {
@@ -148,7 +148,7 @@ export function InsiderPrecisionTab({
           setParams(p);
         }
         setConfirmOpen(false);
-        showSuccess("Insider precision settings saved");
+        showSuccess("Insider conviction settings saved");
       })
       .catch((err) => {
         showError(err instanceof Error ? err.message : "Save failed");
@@ -167,8 +167,8 @@ export function InsiderPrecisionTab({
   if (!params || !saved) {
     return (
       <p className="text-muted-foreground">
-        Insider Precision Score formula not found. Apply migration{" "}
-        <code className="rounded bg-muted px-1 text-xs">20260415120000_seed_insider_precision_score_ske36.sql</code>{" "}
+        Insider Conviction Score formula not found. Apply migration{" "}
+        <code className="rounded bg-muted px-1 text-xs">20260415120000_seed_insider_conviction_score_ske36.sql</code>{" "}
         and ensure an organization exists.
       </p>
     );
@@ -184,7 +184,7 @@ export function InsiderPrecisionTab({
     <>
       <SectionCard className="rounded-xl border-border bg-card">
         <h2 className="mb-2 text-sm font-medium text-foreground">
-          Insider Precision Score (SKE-36)
+          Insider Conviction Score (SKE-36)
         </h2>
         <p className="text-xs leading-relaxed text-muted-foreground">
           Parameters for role weights, recency decay, clustering, tanh scaling, trade
@@ -435,7 +435,7 @@ export function InsiderPrecisionTab({
             <Select
               value={params.market_cap_normalization_method}
               onValueChange={(v) =>
-                patch("market_cap_normalization_method", v as InsiderPrecisionCapNormMethod)
+                patch("market_cap_normalization_method", v as InsiderConvictionCapNormMethod)
               }
             >
               <SelectTrigger className="mt-3 h-10 max-w-md w-full">

@@ -5,7 +5,7 @@ import { Footer } from "@/components/marketing/footer"
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for the Precision platform, websites, and related services provided by Precision AI LLC.",
+    "Terms of Service for the Conviction platform, websites, and related services provided by Conviction AI LLC.",
 }
 
 export default function TermsPage() {
@@ -33,11 +33,11 @@ export default function TermsPage() {
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   These Terms of Service (&quot;Terms&quot;) govern access to
-                  and use of the Precision platform, the websites at
-                  withprecision.ai and app.withprecision.ai, and any related
+                  and use of the Conviction platform, the websites at
+                  withconviction.ai and app.withconviction.ai, and any related
                   services (collectively, the &quot;Service&quot;) provided by
-                  Precision AI LLC, a Virginia limited liability company
-                  (&quot;Precision,&quot; &quot;we,&quot; &quot;our,&quot; or
+                  Conviction AI LLC, a Virginia limited liability company
+                  (&quot;Conviction,&quot; &quot;we,&quot; &quot;our,&quot; or
                   &quot;us&quot;). By accessing or using the Service, you
                   agree to be bound by these Terms and by our Privacy Policy.
                 </p>
@@ -126,7 +126,7 @@ export default function TermsPage() {
                   keep that information current. You are responsible for
                   safeguarding your account credentials and for all activities
                   that occur under your account. Notify us immediately at
-                  alex@withprecision.ai of any actual or suspected
+                  alex@withconviction.ai of any actual or suspected
                   unauthorized access.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
@@ -152,7 +152,7 @@ export default function TermsPage() {
                       Payment processor.
                     </strong>{" "}
                     Payments are processed by Stripe. Customer authorizes
-                    Precision (and Stripe acting on our behalf) to charge the
+                    Conviction (and Stripe acting on our behalf) to charge the
                     payment method on file for all fees due.
                   </li>
                   <li>
@@ -168,7 +168,7 @@ export default function TermsPage() {
                     <strong className="text-foreground">Taxes.</strong> Fees are
                     exclusive of all taxes, levies, or duties. Customer is
                     responsible for all such amounts other than taxes
-                    assessable against Precision based on its net income.
+                    assessable against Conviction based on its net income.
                   </li>
                   <li>
                     <strong className="text-foreground">
@@ -275,7 +275,7 @@ export default function TermsPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   <strong className="text-foreground">Ownership.</strong> As
                   between the parties, Customer retains all right, title, and
-                  interest in and to Customer Data. Customer grants Precision
+                  interest in and to Customer Data. Customer grants Conviction
                   a worldwide, non-exclusive, royalty-free license to host,
                   copy, transmit, display, and process Customer Data and
                   Inputs solely to provide, secure, and improve the Service in
@@ -287,25 +287,25 @@ export default function TermsPage() {
                   </strong>{" "}
                   Customer represents and warrants that it has all rights,
                   consents, and authority necessary to provide Customer Data
-                  and Inputs to the Service and that Precision&apos;s use of
+                  and Inputs to the Service and that Conviction&apos;s use of
                   Customer Data as contemplated in these Terms will not
                   infringe or violate the rights of any third party or any
                   law.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   <strong className="text-foreground">Output.</strong> Subject
-                  to Customer&apos;s compliance with these Terms, Precision
+                  to Customer&apos;s compliance with these Terms, Conviction
                   assigns to Customer all rights it has in Output specifically
                   generated for Customer through Customer&apos;s use of the
                   Service. Customer acknowledges that Output is not unique;
                   due to the nature of AI systems, similar Output may be
-                  generated for other users. Precision makes no claim of
+                  generated for other users. Conviction makes no claim of
                   ownership over Customer&apos;s Output but retains all rights
                   in the underlying Service.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   <strong className="text-foreground">Aggregated data.</strong>{" "}
-                  Precision may collect and use aggregated, de-identified, or
+                  Conviction may collect and use aggregated, de-identified, or
                   anonymized data derived from use of the Service for any
                   lawful purpose, including improving the Service.
                 </p>
@@ -325,7 +325,7 @@ export default function TermsPage() {
                   <li>Should be independently verified before being relied upon.</li>
                   <li>
                     Does not represent the views or recommendations of
-                    Precision.
+                    Conviction.
                   </li>
                   <li>
                     May reflect content that is similar to Output generated
@@ -333,7 +333,7 @@ export default function TermsPage() {
                   </li>
                 </ul>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Precision does not use Customer Data to train foundation
+                  Conviction does not use Customer Data to train foundation
                   models. We configure our AI integrations to disable
                   provider-side training on our API traffic where the provider
                   supports such controls.
@@ -372,7 +372,7 @@ export default function TermsPage() {
                   financial instrument.
                 </p>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Precision AI LLC is{" "}
+                  Conviction AI LLC is{" "}
                   <strong className="text-foreground">not</strong> a registered
                   investment adviser, broker-dealer, or fiduciary. No
                   fiduciary, agency, or advisory relationship is created by
@@ -396,8 +396,8 @@ export default function TermsPage() {
                   10. Intellectual Property
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Precision and its licensors own the Service, the
-                  Documentation, all Precision trademarks and brand assets,
+                  Conviction and its licensors own the Service, the
+                  Documentation, all Conviction trademarks and brand assets,
                   and all software, algorithms, models, designs, and content
                   underlying the Service. Except for the limited rights
                   expressly granted in these Terms, no rights are granted to
@@ -406,7 +406,7 @@ export default function TermsPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   <strong className="text-foreground">Feedback.</strong> If you
                   provide feedback, suggestions, or recommendations regarding
-                  the Service, you grant Precision a perpetual, irrevocable,
+                  the Service, you grant Conviction a perpetual, irrevocable,
                   royalty-free license to use that feedback without
                   restriction.
                 </p>
@@ -440,10 +440,10 @@ export default function TermsPage() {
                   12. Publicity
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Precision may identify Customer by name and logo as a
-                  customer of Precision in marketing materials and on
-                  Precision&apos;s website. Customer may opt out of this use
-                  by emailing alex@withprecision.ai.
+                  Conviction may identify Customer by name and logo as a
+                  customer of Conviction in marketing materials and on
+                  Conviction&apos;s website. Customer may opt out of this use
+                  by emailing alex@withconviction.ai.
                 </p>
               </section>
 
@@ -468,11 +468,11 @@ export default function TermsPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   THE SERVICE AND ALL OUTPUT ARE PROVIDED &quot;AS IS&quot;
                   AND &quot;AS AVAILABLE,&quot; WITHOUT WARRANTIES OF ANY
-                  KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. PRECISION
+                  KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. CONVICTION
                   SPECIFICALLY DISCLAIMS ANY WARRANTIES OF MERCHANTABILITY,
                   FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT,
                   AND ANY WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE
-                  OF TRADE. PRECISION DOES NOT WARRANT THAT THE SERVICE WILL
+                  OF TRADE. CONVICTION DOES NOT WARRANT THAT THE SERVICE WILL
                   BE UNINTERRUPTED, ERROR-FREE, SECURE, OR THAT OUTPUT WILL
                   BE ACCURATE, COMPLETE, OR RELIABLE.
                 </p>
@@ -487,7 +487,7 @@ export default function TermsPage() {
                 </p>
                 <ul className="mt-4 list-disc pl-6 text-muted-foreground">
                   <li>
-                    IN NO EVENT WILL PRECISION OR ITS AFFILIATES, OFFICERS,
+                    IN NO EVENT WILL CONVICTION OR ITS AFFILIATES, OFFICERS,
                     DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY
                     INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY,
                     OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE,
@@ -496,10 +496,10 @@ export default function TermsPage() {
                     POSSIBILITY OF SUCH DAMAGES.
                   </li>
                   <li>
-                    PRECISION&apos;S TOTAL AGGREGATE LIABILITY ARISING OUT OF
+                    CONVICTION&apos;S TOTAL AGGREGATE LIABILITY ARISING OUT OF
                     OR RELATING TO THESE TERMS OR THE SERVICE WILL NOT EXCEED
                     THE GREATER OF (A) THE FEES PAID OR PAYABLE BY CUSTOMER TO
-                    PRECISION IN THE TWELVE (12) MONTHS PRECEDING THE EVENT
+                    CONVICTION IN THE TWELVE (12) MONTHS PRECEDING THE EVENT
                     GIVING RISE TO THE CLAIM OR (B) ONE HUNDRED U.S. DOLLARS
                     (US$100).
                   </li>
@@ -517,7 +517,7 @@ export default function TermsPage() {
                   16. Indemnification
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  You will defend, indemnify, and hold harmless Precision and
+                  You will defend, indemnify, and hold harmless Conviction and
                   its affiliates, officers, directors, employees, and agents
                   from and against any claims, damages, liabilities, costs,
                   and expenses (including reasonable attorneys&apos; fees)
@@ -641,7 +641,7 @@ export default function TermsPage() {
                   <strong className="text-foreground">
                     Class-action waiver.
                   </strong>{" "}
-                  YOU AND PRECISION AGREE THAT EACH MAY BRING CLAIMS AGAINST
+                  YOU AND CONVICTION AGREE THAT EACH MAY BRING CLAIMS AGAINST
                   THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A
                   PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS,
                   CONSOLIDATED, OR REPRESENTATIVE PROCEEDING. THE ARBITRATOR
@@ -660,7 +660,7 @@ export default function TermsPage() {
                 <p className="mt-4 leading-relaxed text-muted-foreground">
                   <strong className="text-foreground">Opt-out.</strong>{" "}
                   Customer may opt out of this Section 22 by sending written
-                  notice to alex@withprecision.ai within 30 days after first
+                  notice to alex@withconviction.ai within 30 days after first
                   accepting these Terms. The notice must include the name,
                   mailing address, and email associated with the account and a
                   clear statement that Customer is opting out of arbitration.
@@ -698,8 +698,8 @@ export default function TermsPage() {
                   24. Notices
                 </h2>
                 <p className="mt-4 leading-relaxed text-muted-foreground">
-                  Notices to Precision must be in writing and sent to
-                  alex@withprecision.ai with a copy to Precision AI LLC,
+                  Notices to Conviction must be in writing and sent to
+                  alex@withconviction.ai with a copy to Conviction AI LLC,
                   8401 Mayland Dr, Ste A, Richmond, VA 23294, USA. Notices to
                   Customer may be sent to the billing or administrator email
                   associated with the account or posted in the Service.
@@ -715,7 +715,7 @@ export default function TermsPage() {
                   our prior written consent (whether by operation of law or
                   otherwise), except to a successor in connection with a
                   merger, acquisition, or sale of substantially all of your
-                  assets that is not a competitor of Precision. Precision
+                  assets that is not a competitor of Conviction. Conviction
                   may assign these Terms without restriction. Any prohibited
                   assignment is void.
                 </p>
@@ -729,7 +729,7 @@ export default function TermsPage() {
                   If you believe content available through the Service
                   infringes your copyright, send a notice that complies with
                   17 U.S.C. § 512 to our designated agent at
-                  alex@withprecision.ai. We may remove allegedly infringing
+                  alex@withconviction.ai. We may remove allegedly infringing
                   content and terminate the accounts of repeat infringers in
                   appropriate circumstances.
                 </p>
@@ -802,7 +802,7 @@ export default function TermsPage() {
                   Questions about these Terms can be directed to:
                 </p>
                 <address className="mt-4 not-italic leading-relaxed text-muted-foreground">
-                  Precision AI LLC
+                  Conviction AI LLC
                   <br />
                   8401 Mayland Dr, Ste A
                   <br />
@@ -811,10 +811,10 @@ export default function TermsPage() {
                   United States
                   <br />
                   <a
-                    href="mailto:alex@withprecision.ai"
+                    href="mailto:alex@withconviction.ai"
                     className="font-medium text-primary hover:text-primary/80"
                   >
-                    alex@withprecision.ai
+                    alex@withconviction.ai
                   </a>
                 </address>
               </section>

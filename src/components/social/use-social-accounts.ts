@@ -6,7 +6,7 @@ import { useAuth } from "@/context/auth-context";
 import { useToast } from "@/context/toast-context";
 import {
   getSocialAuthorizeUrl,
-  listPrecisionSocialAccounts,
+  listConvictionSocialAccounts,
   refreshSocialAccountToken,
   socialPlatformLabel,
   type ConfigurableSocialPlatform,
@@ -35,7 +35,7 @@ export function useSocialAccounts() {
     if (!accessToken) return;
     setLoading(true);
     try {
-      const data = await listPrecisionSocialAccounts(accessToken);
+      const data = await listConvictionSocialAccounts(accessToken);
       setRows(data);
     } catch (err) {
       showError(err instanceof Error ? err.message : "Failed to load social accounts");

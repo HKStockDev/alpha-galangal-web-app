@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { isAppHost } from "@/lib/site-hosts";
 
 /**
- * Returns `true` once mounted on the app host (e.g. app.localhost / app.withprecision.ai),
+ * Returns `true` once mounted on the app host (e.g. app.localhost / app.withconviction.ai),
  * `false` on the marketing host or during SSR. Useful for gating UI that should appear only
  * on public-facing marketing pages.
  */

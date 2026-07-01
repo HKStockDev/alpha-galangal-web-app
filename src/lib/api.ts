@@ -759,13 +759,13 @@ export interface OrgEquityDetails {
   scores: {
     fundamental_constriction_score: number | null;
     net_exposure_score: number | null;
-    insider_precision_score: number | null;
+    insider_conviction_score: number | null;
     political_score: number | null;
   };
   score_breakdowns: {
     fundamental_constriction_score: Record<string, unknown> | null;
     net_exposure_score: Record<string, unknown> | null;
-    insider_precision_score: Record<string, unknown> | null;
+    insider_conviction_score: Record<string, unknown> | null;
     political_score: Record<string, unknown> | null;
   };
   sentiment: {
@@ -1812,7 +1812,7 @@ export type MultiFormulaSortColumn =
   | "ticker"
   | "fundamental_constriction_score"
   | "net_exposure_score"
-  | "insider_precision_score"
+  | "insider_conviction_score"
   | "political_score";
 
 export interface MultiFormulaScreenerParams {
@@ -1823,8 +1823,8 @@ export interface MultiFormulaScreenerParams {
   max_fundamental_constriction_score?: number;
   min_net_exposure_score?: number;
   max_net_exposure_score?: number;
-  min_insider_precision_score?: number;
-  max_insider_precision_score?: number;
+  min_insider_conviction_score?: number;
+  max_insider_conviction_score?: number;
   min_political_score?: number;
   max_political_score?: number;
   sort_by?: MultiFormulaSortColumn;
@@ -1837,7 +1837,7 @@ export interface MultiFormulaScreenerRow {
   name: string;
   fundamental_constriction_score: number | null;
   net_exposure_score: number | null;
-  insider_precision_score: number | null;
+  insider_conviction_score: number | null;
   political_score: number | null;
 }
 
@@ -2061,12 +2061,12 @@ function appendMultiFormulaParams(sp: URLSearchParams, params?: MultiFormulaScre
   setNum("min_net_exposure_score", params.min_net_exposure_score);
   setNum("max_net_exposure_score", params.max_net_exposure_score);
   setNum(
-    "min_insider_precision_score",
-    params.min_insider_precision_score
+    "min_insider_conviction_score",
+    params.min_insider_conviction_score
   );
   setNum(
-    "max_insider_precision_score",
-    params.max_insider_precision_score
+    "max_insider_conviction_score",
+    params.max_insider_conviction_score
   );
   setNum("min_political_score", params.min_political_score);
   setNum("max_political_score", params.max_political_score);
@@ -2439,7 +2439,7 @@ export async function uploadHedgeFundsCsv(
 export interface FormulaWeights {
   hedge_fund_performance: number;
   hedge_fund_risk: number;
-  hedge_fund_precision: number;
+  hedge_fund_conviction: number;
   hedge_fund_institutional_strength: number;
   hedge_fund_positioning: number;
 }
@@ -2615,13 +2615,13 @@ export async function updatePoliticalScoreWeights(
   return formula;
 }
 
-/** Insider Precision Score (SKE-36) — matches `formulas.definition` when type is `insider_precision`. */
-export type InsiderPrecisionCapNormMethod =
+/** Insider Conviction Score (SKE-36) — matches `formulas.definition` when type is `insider_conviction`. */
+export type InsiderConvictionCapNormMethod =
   | "market_cap"
   | "enterprise_value"
   | "revenue_ttm";
 
-export interface InsiderPrecisionFormulaParams {
+export interface InsiderConvictionFormulaParams {
   role_weight_ceo: number;
   role_weight_cfo: number;
   role_weight_chairman: number;
@@ -2642,18 +2642,18 @@ export interface InsiderPrecisionFormulaParams {
   score_scaling_factor: number;
   minimum_trade_value_threshold_usd: number;
   included_transaction_types: string[];
-  market_cap_normalization_method: InsiderPrecisionCapNormMethod;
+  market_cap_normalization_method: InsiderConvictionCapNormMethod;
 }
 
-export interface InsiderPrecisionFormulaResponse {
+export interface InsiderConvictionFormulaResponse {
   formula: {
     id: string;
     key: string;
     name: string;
     output_type: string;
     definition: {
-      type: "insider_precision";
-      params: InsiderPrecisionFormulaParams;
+      type: "insider_conviction";
+      params: InsiderConvictionFormulaParams;
     };
     display_formula: string;
     description: string;
@@ -2662,23 +2662,23 @@ export interface InsiderPrecisionFormulaResponse {
   components: Record<string, FormulaComponent>;
 }
 
-export async function getInsiderPrecisionScoreFormula(
+export async function getInsiderConvictionScoreFormula(
   accessToken: string
-): Promise<InsiderPrecisionFormulaResponse> {
+): Promise<InsiderConvictionFormulaResponse> {
   const baseUrl = getApiUrl();
-  const response = await fetch(`${baseUrl}/formulas/insider-precision-score`, {
+  const response = await fetch(`${baseUrl}/formulas/insider-conviction-score`, {
     headers: { Authorization: `Bearer ${accessToken}` },
   });
-  if (!response.ok) throw new Error("Failed to fetch insider precision formula");
+  if (!response.ok) throw new Error("Failed to fetch insider conviction formula");
   return response.json();
 }
 
-export async function updateInsiderPrecisionScoreParams(
-  params: InsiderPrecisionFormulaParams,
+export async function updateInsiderConvictionScoreParams(
+  params: InsiderConvictionFormulaParams,
   accessToken: string
-): Promise<InsiderPrecisionFormulaResponse["formula"]> {
+): Promise<InsiderConvictionFormulaResponse["formula"]> {
   const baseUrl = getApiUrl();
-  const response = await fetch(`${baseUrl}/formulas/insider-precision-score`, {
+  const response = await fetch(`${baseUrl}/formulas/insider-conviction-score`, {
     method: "PATCH",
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -3809,7 +3809,7 @@ export interface NetExposureScoreCalculateResult {
   scores: NetExposureScoreRow[];
 }
 
-export interface InsiderPrecisionScoreRow {
+export interface InsiderConvictionScoreRow {
   ticker: string;
   score: number;
   rank: number | null;
@@ -3821,13 +3821,13 @@ export interface InsiderPrecisionScoreRow {
   uniqueSellers: number;
 }
 
-export interface InsiderPrecisionCalculateResult {
+export interface InsiderConvictionCalculateResult {
   tickersRequested: number;
   tickersWithData: number;
   scoresWritten: number;
   tradesUsed: number;
   errors: { ticker: string; message: string }[];
-  scores: InsiderPrecisionScoreRow[];
+  scores: InsiderConvictionScoreRow[];
 }
 
 export interface BuffettScoreRow {
@@ -3847,7 +3847,7 @@ export interface BuffettScoreCalculateResult {
   scores: BuffettScoreRow[];
 }
 
-export async function getInsiderPrecisionScores(
+export async function getInsiderConvictionScores(
   accessToken: string,
   params?: {
     tickers?: string[];
@@ -3855,7 +3855,7 @@ export async function getInsiderPrecisionScores(
     minScore?: number;
     maxScore?: number;
   }
-): Promise<InsiderPrecisionCalculateResult> {
+): Promise<InsiderConvictionCalculateResult> {
   const baseUrl = getApiUrl();
   const qs = new URLSearchParams();
   if (params?.tickers?.length) {
@@ -3864,19 +3864,19 @@ export async function getInsiderPrecisionScores(
   if (params?.limit != null) qs.set("limit", String(params.limit));
   if (params?.minScore != null) qs.set("minScore", String(params.minScore));
   if (params?.maxScore != null) qs.set("maxScore", String(params.maxScore));
-  const url = `${baseUrl}/stocks/insider-precision/scores${qs.toString() ? "?" + qs.toString() : ""}`;
+  const url = `${baseUrl}/stocks/insider-conviction/scores${qs.toString() ? "?" + qs.toString() : ""}`;
   const response = await fetch(url, {
     headers: { Authorization: `Bearer ${accessToken}` },
   });
   if (!response.ok) {
     const data = (await response.json().catch(() => ({}))) as { message?: string | string[] };
     const msg = Array.isArray(data.message) ? data.message.join("; ") : data.message;
-    throw new Error(msg ?? `Failed to load insider precision scores (${response.status})`);
+    throw new Error(msg ?? `Failed to load insider conviction scores (${response.status})`);
   }
   return response.json();
 }
 
-export async function calculateInsiderPrecisionScores(
+export async function calculateInsiderConvictionScores(
   accessToken: string,
   body?: {
     tickers?: string[];
@@ -3884,9 +3884,9 @@ export async function calculateInsiderPrecisionScores(
     minScore?: number;
     maxScore?: number;
   }
-): Promise<InsiderPrecisionCalculateResult> {
+): Promise<InsiderConvictionCalculateResult> {
   const baseUrl = getApiUrl();
-  const response = await fetch(`${baseUrl}/stocks/insider-precision/calculate-scores`, {
+  const response = await fetch(`${baseUrl}/stocks/insider-conviction/calculate-scores`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -3897,7 +3897,7 @@ export async function calculateInsiderPrecisionScores(
   if (!response.ok) {
     const data = (await response.json().catch(() => ({}))) as { message?: string | string[] };
     const msg = Array.isArray(data.message) ? data.message.join("; ") : data.message;
-    throw new Error(msg ?? `Insider precision score run failed (${response.status})`);
+    throw new Error(msg ?? `Insider conviction score run failed (${response.status})`);
   }
   return response.json();
 }
@@ -5999,8 +5999,8 @@ export async function ingestStockChartBarsFromFmp(
 }
 
 /**
- * Precision-managed social media accounts (admin only).
- * The backend resolves the Precision org from its own `PRECISION_ORG_UUID` env var,
+ * Conviction-managed social media accounts (admin only).
+ * The backend resolves the Conviction org from its own `CONVICTION_ORG_UUID` env var,
  * so the frontend does not send `organization_id` on these endpoints.
  *
  * The OAuth endpoints are platform-parameterized:
@@ -6068,7 +6068,7 @@ function parseSocialAccountsPayload(raw: unknown): SocialAccountRow[] {
   return [];
 }
 
-export async function listPrecisionSocialAccounts(
+export async function listConvictionSocialAccounts(
   accessToken: string
 ): Promise<SocialAccountRow[]> {
   const baseUrl = getApiUrl();
@@ -7536,7 +7536,7 @@ export async function submitMarketingContact(
   }
   if (response.status === 503) {
     throw new Error(
-      "Our email service is temporarily unavailable. Please email alex@withprecision.ai instead."
+      "Our email service is temporarily unavailable. Please email alex@withconviction.ai instead."
     );
   }
 

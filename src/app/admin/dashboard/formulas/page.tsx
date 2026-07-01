@@ -50,13 +50,13 @@ import {
   readNetExposureDirectionWeights,
   writeNetExposureDirectionWeights,
 } from "@/lib/net-exposure-direction-weights";
-import { InsiderPrecisionTab } from "./insider-precision-tab";
+import { InsiderConvictionTab } from "./insider-conviction-tab";
 
 type TabId =
   | "hedge-fund-quality"
   | "fundamental-constriction"
   | "political-score"
-  | "insider-precision"
+  | "insider-conviction"
   | "warren-buffett-score"
   | "burry-score"
   | "druckenmiller-score"
@@ -72,7 +72,7 @@ type TabId =
 const WEIGHT_ORDER: (keyof FormulaWeights)[] = [
   "hedge_fund_performance",
   "hedge_fund_risk",
-  "hedge_fund_precision",
+  "hedge_fund_conviction",
   "hedge_fund_institutional_strength",
   "hedge_fund_positioning",
 ];
@@ -80,7 +80,7 @@ const WEIGHT_ORDER: (keyof FormulaWeights)[] = [
 const LABELS: Record<keyof FormulaWeights, string> = {
   hedge_fund_performance: "hedge_fund_performance",
   hedge_fund_risk: "hedge_fund_risk",
-  hedge_fund_precision: "hedge_fund_precision",
+  hedge_fund_conviction: "hedge_fund_conviction",
   hedge_fund_institutional_strength: "hedge_fund_institutional_strength",
   hedge_fund_positioning: "hedge_fund_positioning",
 };
@@ -3539,7 +3539,7 @@ function MarketContentClassifierPromptTab({
           Linear{" "}
           <a
             className="text-primary underline"
-            href="https://linear.app/precisionai/issue/CON-83/eventsnews-prompts"
+            href="https://linear.app/convictionai/issue/CON-83/eventsnews-prompts"
             target="_blank"
             rel="noreferrer"
           >
@@ -3549,7 +3549,7 @@ function MarketContentClassifierPromptTab({
           ingestion:{" "}
           <a
             className="text-primary underline"
-            href="https://linear.app/precisionai/issue/CON-53/eventsnews-schema-updatemigration"
+            href="https://linear.app/convictionai/issue/CON-53/eventsnews-schema-updatemigration"
             target="_blank"
             rel="noreferrer"
           >
@@ -4007,7 +4007,7 @@ const TABS: { id: TabId; label: string }[] = [
   { id: "hedge-fund-quality", label: "Hedge Fund Quality" },
   { id: "fundamental-constriction", label: "Fundamental constriction" },
   { id: "political-score", label: "Political score" },
-  { id: "insider-precision", label: "Insider precision" },
+  { id: "insider-conviction", label: "Insider conviction" },
   { id: "warren-buffett-score", label: "Warren Buffett Score" },
   { id: "burry-score", label: "Burry Score" },
   { id: "druckenmiller-score", label: "Druckenmiller Score" },
@@ -4097,8 +4097,8 @@ export default function FormulasPage() {
                 showError={showError}
               />
             )}
-            {activeTab === "insider-precision" && (
-              <InsiderPrecisionTab
+            {activeTab === "insider-conviction" && (
+              <InsiderConvictionTab
                 accessToken={accessToken}
                 showSuccess={showSuccess}
                 showError={showError}

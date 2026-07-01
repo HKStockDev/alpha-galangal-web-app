@@ -153,7 +153,7 @@ export function AdminSocialOverview() {
                 </div>
               ) : (
                 <p className="text-sm text-muted-foreground">
-                  No {platform.label} account linked for Precision publishing.
+                  No {platform.label} account linked for Conviction publishing.
                 </p>
               )}
 

@@ -230,7 +230,7 @@ export function MultiFormulaScreener() {
                 <option value="ticker">Ticker</option>
                 <option value="fundamental_constriction_score">Fundamental constriction</option>
                 <option value="net_exposure_score">Net exposure</option>
-                <option value="insider_precision_score">Insider precision</option>
+                <option value="insider_conviction_score">Insider conviction</option>
                 <option value="political_score">Political score</option>
               </select>
             </div>
@@ -318,7 +318,7 @@ export function MultiFormulaScreener() {
                     <TableHead>Name</TableHead>
                     <TableHead className="text-right">Fundamental constriction</TableHead>
                     <TableHead className="text-right">Net exposure</TableHead>
-                    <TableHead className="text-right">Insider precision</TableHead>
+                    <TableHead className="text-right">Insider conviction</TableHead>
                     <TableHead className="text-right">Political score</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -341,7 +341,7 @@ export function MultiFormulaScreener() {
                         {formatScore(row.net_exposure_score)}
                       </TableCell>
                       <TableCell className="text-right tabular-nums">
-                        {formatScore(row.insider_precision_score)}
+                        {formatScore(row.insider_conviction_score)}
                       </TableCell>
                       <TableCell className="text-right tabular-nums">
                         {formatScore(row.political_score)}

@@ -87,10 +87,10 @@ export default function ContactPage() {
                       within one business day.
                     </p>
                     <a
-                      href="mailto:alex@withprecision.ai"
+                      href="mailto:alex@withconviction.ai"
                       className="mt-4 inline-flex text-sm font-medium text-primary hover:text-primary/80"
                     >
-                      alex@withprecision.ai
+                      alex@withconviction.ai
                     </a>
                   </div>
                 </div>

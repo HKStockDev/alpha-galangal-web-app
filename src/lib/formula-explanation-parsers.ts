@@ -1,6 +1,6 @@
 import {
   FUNDAMENTAL_CONTRICTION_MARKETING_KEY,
-  INSIDER_PRECISION_MARKETING_KEY,
+  INSIDER_CONVICTION_MARKETING_KEY,
   NET_EXPOSURE_MARKETING_KEY,
   POLITICAL_SCORE_MARKETING_KEY,
 } from "@/lib/formula-marketing-keys";
@@ -21,7 +21,7 @@ export type FormulaScoreKey =
   | typeof NET_EXPOSURE_MARKETING_KEY
   | typeof FUNDAMENTAL_CONTRICTION_MARKETING_KEY
   | typeof POLITICAL_SCORE_MARKETING_KEY
-  | typeof INSIDER_PRECISION_MARKETING_KEY;
+  | typeof INSIDER_CONVICTION_MARKETING_KEY;
 
 export type ScoreExplanationLine = { label: string; value: string };
 
@@ -39,7 +39,7 @@ export function scoreExplanationSummary(
       }
       return null;
     }
-    case INSIDER_PRECISION_MARKETING_KEY: {
+    case INSIDER_CONVICTION_MARKETING_KEY: {
       const buy = explanation.buyPressure;
       const sell = explanation.sellPressure;
       if (typeof buy === "number" && typeof sell === "number") {
@@ -85,7 +85,7 @@ export function scoreExplanationLines(
         { label: "Exposure rows used", value: fmtNum(explanation.rowsUsed, 0) },
         { label: "Rows without polarity", value: fmtNum(explanation.noPolarityRows, 0) },
       ];
-    case INSIDER_PRECISION_MARKETING_KEY:
+    case INSIDER_CONVICTION_MARKETING_KEY:
       return [
         { label: "Buy pressure", value: fmtUsd(Number(explanation.buyPressure ?? 0)) },
         { label: "Sell pressure", value: fmtUsd(Number(explanation.sellPressure ?? 0)) },
@@ -136,5 +136,5 @@ export const FORMULA_SCORE_LABELS: Record<string, string> = {
   [NET_EXPOSURE_MARKETING_KEY]: "Net exposure",
   [FUNDAMENTAL_CONTRICTION_MARKETING_KEY]: "Fundamental constriction",
   [POLITICAL_SCORE_MARKETING_KEY]: "Political score",
-  [INSIDER_PRECISION_MARKETING_KEY]: "Insider precision",
+  [INSIDER_CONVICTION_MARKETING_KEY]: "Insider conviction",
 };

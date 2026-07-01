@@ -32,7 +32,7 @@ const principles = [
   },
   {
     icon: Shield,
-    title: "Precision over chatter",
+    title: "Conviction over chatter",
     description:
       "Support deep research and considered positions rather than reactive trading or noise-driven decisions.",
   },

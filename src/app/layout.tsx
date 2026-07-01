@@ -17,10 +17,10 @@ const SITE_URL =
   process.env.NEXT_PUBLIC_MARKETING_BASE_URL?.replace(/\/$/, "") ||
   (process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://www.withprecision.ai");
+    : "https://www.withconviction.ai");
 
-const SITE_NAME = "Precision";
-const DEFAULT_TITLE = "Precision - Component-based content architecture for a research platform";
+const SITE_NAME = "Conviction";
+const DEFAULT_TITLE = "Conviction — Differentiated equity research";
 const DEFAULT_DESCRIPTION =
   "Build custom research models using factors, insider activity, political signals, hedge fund positioning, and industry momentum — inside one structured workflow for serious investors.";
 
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: "%s · Precision",
+    template: "%s · Conviction",
   },
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
-  authors: [{ name: "Precision AI LLC", url: SITE_URL }],
-  creator: "Precision AI LLC",
-  publisher: "Precision AI LLC",
+  authors: [{ name: "Conviction AI LLC", url: SITE_URL }],
+  creator: "Conviction AI LLC",
+  publisher: "Conviction AI LLC",
   keywords: [
     "equity research",
     "factor screening",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Precision - Component-based content architecture for a research platform",
+        alt: "Conviction — Differentiated equity research platform",
       },
     ],
   },

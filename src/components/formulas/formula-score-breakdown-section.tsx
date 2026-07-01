@@ -13,7 +13,7 @@ import { GhostButton } from "@/components/ui-kit/buttons";
 const SCORE_KEYS = [
   "fundamental_constriction_score",
   "net_exposure_score",
-  "insider_precision_score",
+  "insider_conviction_score",
   "political_score",
 ] as const;
 
