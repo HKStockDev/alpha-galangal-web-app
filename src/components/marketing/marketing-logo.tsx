@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const LOGO_LIGHT = "/logos/precision-light-full.svg";
-const LOGO_DARK = "/logos/precision-dark-full.svg";
+import { MARKETING_LOGO } from "@/lib/brand-logos";
 
 export function MarketingLogoLink({ className }: { className?: string }) {
   return (
     <Link href="/" className={className}>
       <Image
-        src={LOGO_LIGHT}
+        src={MARKETING_LOGO.light}
         alt="Precision"
         width={220}
         height={46}
@@ -16,7 +14,7 @@ export function MarketingLogoLink({ className }: { className?: string }) {
         priority
       />
       <Image
-        src={LOGO_DARK}
+        src={MARKETING_LOGO.dark}
         alt="Precision"
         width={220}
         height={46}

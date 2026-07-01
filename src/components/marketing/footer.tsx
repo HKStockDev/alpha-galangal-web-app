@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Facebook, Linkedin } from "lucide-react";
 import { ManageCookiesLink } from "@/components/consent/manage-cookies-link";
 import { MarketingThemeToggle } from "@/components/marketing/marketing-theme-toggle";
+import { MARKETING_LOGO } from "@/lib/brand-logos";
 
 const footerLinks = {
   product: [
@@ -62,14 +63,14 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block">
               <Image
-                src="/logos/precision-light-full.svg"
+                src={MARKETING_LOGO.light}
                 alt="Precision"
                 width={180}
                 height={40}
                 className="h-8 w-auto max-w-[180px] dark:hidden"
               />
               <Image
-                src="/logos/precision-dark-full.svg"
+                src={MARKETING_LOGO.dark}
                 alt="Precision"
                 width={180}
                 height={40}

@@ -1,8 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
+import { brandLogoSrc, type BrandLogoVariant } from "@/lib/brand-logos";
 
 export function BrandLogo({
   collapsed = false,
@@ -11,33 +8,36 @@ export function BrandLogo({
   collapsed?: boolean;
   className?: string;
 }) {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  const mode = mounted && resolvedTheme === "dark" ? "dark" : "light";
-  const src = useMemo(
-    () =>
-      collapsed
-        ? `/logos/precision-${mode}-collapsed.svg`
-        : `/logos/precision-${mode}-full.svg`,
-    [collapsed, mode]
-  );
+  const variant: BrandLogoVariant = collapsed ? "collapsed" : "full";
 
   return (
-    <img
-      src={src}
-      alt="Precision"
-      className={cn(
-        "h-auto w-auto max-w-none",
-        collapsed ? "max-h-7" : "max-h-10",
-        className
-      )}
-      width={collapsed ? 28 : 220}
-      height={collapsed ? 28 : 46}
-      loading="eager"
-      decoding="async"
-    />
+    <>
+      <img
+        src={brandLogoSrc("light", variant)}
+        alt="Precision"
+        className={cn(
+          "h-auto w-auto max-w-none dark:hidden",
+          collapsed ? "max-h-7" : "max-h-10",
+          className
+        )}
+        width={collapsed ? 28 : 220}
+        height={collapsed ? 28 : 46}
+        loading="eager"
+        decoding="async"
+      />
+      <img
+        src={brandLogoSrc("dark", variant)}
+        alt="Precision"
+        className={cn(
+          "hidden h-auto w-auto max-w-none dark:block",
+          collapsed ? "max-h-7" : "max-h-10",
+          className
+        )}
+        width={collapsed ? 28 : 220}
+        height={collapsed ? 28 : 46}
+        loading="eager"
+        decoding="async"
+      />
+    </>
   );
 }
